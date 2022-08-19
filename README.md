@@ -58,5 +58,10 @@ kubectl get svc -n argocd
 argocd login <ARGOCD IP>
 argocd cluster add minikube
 ```
-9. (optional) Sign into the argocd UI with the admin user. Go to the <ARGOCD IP> and fill in the details there.
-10. 
+9. Sign into the argocd UI with the admin user. Go to the <ARGOCD IP> and fill in the details there.
+10. Generate an ssh-key pair to link the github repo to.
+```
+ssh-keygen -t rsa -b 4096 -f argocd
+```
+11. Add the .pub to this repo under settings/Deloy Keys and the other into the argocd UI under settings/repositories/connect repo using ssh.
+12. 
