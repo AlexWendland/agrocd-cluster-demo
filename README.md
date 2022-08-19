@@ -26,7 +26,7 @@ kubectl config set-context minikube
 
 ### Argocd
 
-I followed the two guides, the [argoCD setup guide](https://argo-cd.readthedocs.io/en/stable/getting_started/) and [this](https://opensource.com/article/21/8/argo-cd#:~:text=Install%20Argo%20CD%20on%20a,and%20verify%20it%20using%20kubectl) blog post.
+I followed the two guides, the [argoCD setup guide](https://argo-cd.readthedocs.io/en/stable/getting_started/) and [this](https://opensource.com/article/21/8/argo-cd#:~:text=Install%20Argo%20CD%20on%20a,and%20verify%20it%20using%20kubectl) blog post. As well as this [guide](https://blog.internetz.me/posts/my-road-to-self-hosted-kubernetes-with-k3s/) by our lord and master.
 
 1. Make a new name space
 ```
@@ -53,7 +53,10 @@ minikube tunnel
 ```
 kubectl get svc -n argocd
 ```
-8. (optional) Sign into the admin user for the argocd CLI.
+8. (optional) Sign into the argocd CLI with the admin user.
 ```
 argocd login <ARGOCD IP>
+argocd cluster add minikube
 ```
+9. (optional) Sign into the argocd UI with the admin user. Go to the <ARGOCD IP> and fill in the details there.
+10. 
