@@ -65,3 +65,12 @@ ssh-keygen -t rsa -b 4096 -f argocd
 ```
 11. Add the .pub to this repo under settings/Deloy Keys and the other into the argocd UI under settings/repositories/connect repo using ssh.
 12. 
+
+## Rerunning
+
+When back on your computer in one terminal run the following.
+
+```
+minikube start
+minikube tunnel
+```
