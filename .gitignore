@@ -1,0 +1,7 @@
+# Terraform files
+
+**.tfstate**
+deploy/terraform/.terraform**
+deploy/terraform-bootstrap-image/variables.tf
+deploy/terraform/kubeconfig
+deploy/terraform/variables.tf
