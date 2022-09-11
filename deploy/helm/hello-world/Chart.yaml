@@ -1,0 +1,6 @@
+apiVersion: v2
+name: hello-world
+description: An application to work out networking on ovh
+type: application
+version: 0.0.1
+appVersion: "1.0"
