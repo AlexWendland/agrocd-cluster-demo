@@ -3,9 +3,10 @@
 **.tfstate**
 deploy/terraform/.terraform**
 deploy/terraform-bootstrap-image/variables.tf
-deploy/terraform/kubeconfig
+deploy/terraform/kubeconfig.yml
 deploy/terraform/variables.tf
 
-# Ignore the ssh keys
+# Ignore the ssh keys and repo deployment
 
 deploy/ssh
+deploy/argocd/argocd-repositories.yaml

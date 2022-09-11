@@ -1,0 +1,15 @@
+# Add you github url here and the sshPrivateKey. Then apply this to your
+# kubernetes cluster.
+apiVersion: v1
+kind: Secret
+metadata:
+  name: my-private-repo
+  namespace: argocd
+  labels:
+    argocd.argoproj.io/secret-type: repository
+stringData:
+  url: git@github.com:AlexWendland/argocd-test.git
+  sshPrivateKey: |
+    -----BEGIN OPENSSH PRIVATE KEY-----
+    ...
+    -----END OPENSSH PRIVATE KEY-----
