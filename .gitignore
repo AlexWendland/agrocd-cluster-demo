@@ -5,3 +5,7 @@ deploy/terraform/.terraform**
 deploy/terraform-bootstrap-image/variables.tf
 deploy/terraform/kubeconfig
 deploy/terraform/variables.tf
+
+# Ignore the ssh keys
+
+deploy/ssh

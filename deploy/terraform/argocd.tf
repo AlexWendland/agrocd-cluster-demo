@@ -16,3 +16,5 @@ resource "helm_release" "argocd" {
     ovh_cloud_project_kube_nodepool.node_pool
   ]
 }
+
+# You will need to manually add the repository after start up.
