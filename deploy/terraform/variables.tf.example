@@ -1,0 +1,74 @@
+#
+# KEYS FOR OVH
+#
+
+variable "service_name" {
+  type        = string
+  default     = "You get this from your OVH project"
+}
+
+variable "ovh_application_key" {
+  type        = string
+  default     = "You get this from your OVH api"
+}
+
+variable "ovh_application_secret" {
+  type        = string
+  default     = "You get this from your OVH api"
+}
+
+variable "ovh_consumer_key" {
+  type        = string
+  default     = "You get this from your OVH api"
+}
+
+#
+# CLUSTER CONFIGURATION
+#
+
+variable "kubernetes_cluster_name" {
+    type = string
+    default = "The name for the central cluster"
+}
+
+# For the UK
+variable "os_region_name" {
+    type = string
+    default = "UK1"
+}
+
+variable "kubernetes_nodepool_name" {
+    type = string
+    default = "The name for the node pool"
+}
+
+# This was the latest version when I made this
+variable "kubernetes_version" {
+    type = string
+    default = "1.22"
+}
+
+# This is the cheapest all round type, find these out on:
+# https://www.ovhcloud.com/en-gb/public-cloud/prices/
+variable "kubernetes_flavor_name" {
+    type = string
+    default = "b2-7"
+}
+
+# The default number of nodes
+variable "kubernetes_nodepool_desired_nodes" {
+    type = string
+    default = "1"
+}
+
+# The max number of nodes
+variable "kubernetes_nodepool_max_nodes" {
+    type = string
+    default = "3"
+}
+
+# The min number of nodes
+variable "kubernetes_nodepool_min_nodes" {
+    type = string
+    default = "1"
+}
