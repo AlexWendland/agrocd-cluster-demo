@@ -2,7 +2,7 @@
 # kind: Application
 # metadata:
 #   name: hello-world
-#   namespace: application
+#   namespace: my-applications
 #   annotations:
 #     argocd.argoproj.io/sync-wave: "1"
 # spec:
