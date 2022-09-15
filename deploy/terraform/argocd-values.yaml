@@ -1,6 +1,6 @@
 server:
   additionalApplications:
-    - name: application
+    - name: my-applications
       namespace: argocd
       project: default
       finalizers:
@@ -8,11 +8,11 @@ server:
       source:
         repoURL: git@github.com:AlexWendland/argocd-test.git
         targetRevision: HEAD
-        path: deploy/application
+        path: deploy/my-applications
         directory:
           recurse: true
       destination:
-        namespace: application
+        namespace: my-applications
         server: https://kubernetes.default.svc
       syncPolicy:
         automated:
