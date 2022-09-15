@@ -1,19 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: init-application
+  name: application
   namespace: argocd
   annotations:
     argocd.argoproj.io/sync-wave: "1"
 spec:
   project: default
   source:
-    path: deploy/init-application
+    path: deploy/application
     repoURL: git@github.com:AlexWendland/argocd-test.git
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
-    namespace: init-application
+    namespace: application
   syncPolicy:
     automated:
       prune: true
