@@ -9,15 +9,7 @@ spec:
   source:
     chart: loki-stack
     repoURL: https://grafana.github.io/helm-charts
-    targetRevision: "2.6.0"
-    helm:
-      values: |
-        images:
-          datasources:
-          - name: Loki
-            type: loki
-            url: http://loki:3100
-            access: proxy
+    targetRevision: "2.8.2"
   destination:
     namespace: loki
     server: https://kubernetes.default.svc
