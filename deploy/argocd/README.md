@@ -31,3 +31,11 @@ browser.
 ```
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
 ```
+
+6. For safety reasons change this password on the UI and then delete the
+secrete using the following command.
+
+```
+kubectl -n argocd delete secret argocd-initial-admin-secret
+```
+
