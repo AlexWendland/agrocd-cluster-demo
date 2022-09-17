@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     path: deploy/helm/hello-world
-    repoURL: git@github.com:AlexWendland/argocd-test.git
+    repoURL: git@github.com:AlexWendland/argocd-test
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
