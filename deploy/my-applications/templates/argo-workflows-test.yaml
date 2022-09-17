@@ -2,7 +2,6 @@
 # kind: Application
 # metadata:
 #   name: argo-workflows-test
-#   namespace: my-applications
 #   annotations:
 #     argocd.argoproj.io/sync-wave: "1"
 # spec:
