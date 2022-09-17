@@ -38,4 +38,3 @@ secrete using the following command.
 ```
 kubectl -n argocd delete secret argocd-initial-admin-secret
 ```
-
