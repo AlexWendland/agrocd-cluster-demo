@@ -1,21 +1,21 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: hello-world
-  annotations:
-    argocd.argoproj.io/sync-wave: "1"
-spec:
-  project: default
-  source:
-    path: deploy/helm/hello-world
-    repoURL: git@github.com:AlexWendland/argocd-test
-    targetRevision: HEAD
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: hello-world
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   name: hello-world
+#   annotations:
+#     argocd.argoproj.io/sync-wave: "1"
+# spec:
+#   project: default
+#   source:
+#     path: deploy/helm/hello-world
+#     repoURL: git@github.com:AlexWendland/argocd-test
+#     targetRevision: HEAD
+#   destination:
+#     server: https://kubernetes.default.svc
+#     namespace: hello-world
+#   syncPolicy:
+#     automated:
+#       prune: true
+#       selfHeal: true
+#     syncOptions:
+#       - CreateNamespace=true
