@@ -21,10 +21,10 @@ spec:
         #   size: 5Gi
         #   accessMode: ReadWriteOnce
         #   mountPropagation: None
-        # auth:
-        #   actions: update, download, list
-        #   credentials:
-        #   - admin:$2y$05$CB7Fy/gfVdBjt2jLbukd2eqWuxHdwkbsAY1X09dgmZZjy0L6R2Reu
+        auth:
+          actions: update, download, list
+          credentials:
+            admin: $2y$05$CB7Fy/gfVdBjt2jLbukd2eqWuxHdwkbsAY1X09dgmZZjy0L6R2Reu
   destination:
     server: https://kubernetes.default.svc
     namespace: pypi-server
