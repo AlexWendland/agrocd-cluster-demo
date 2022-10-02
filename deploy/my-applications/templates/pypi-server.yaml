@@ -10,6 +10,7 @@ spec:
   source:
     repoURL: https://github.com/owkin/charts
     chart: pypiserver
+    targetRevision: "1.3.2"
     helm:
       values: |
         # persistence:
