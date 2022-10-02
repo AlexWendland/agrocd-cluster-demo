@@ -1,35 +1,35 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: argo-workflows
-  namespace: argocd
-  annotations:
-    argocd.argoproj.io/sync-wave: "3"
-spec:
-  project: default
-  source:
-    chart: argo-workflows
-    repoURL: 'https://argoproj.github.io/argo-helm'
-    targetRevision: '0.17.1'
-    helm:
-      values: |
-        images:
-          # -- imagePullPolicy to apply to all containers
-          pullPolicy: IfNotPresent
-          # -- Secrets with credentials to pull images from a private registry
-          pullSecrets: []
-        controller:
-          # -- Specify all namespaces where this workflow controller instance will manage
-          # workflows. This controls where the service account and RBAC resources will
-          # be created. Only valid when singleNamespace is false.
-          workflowNamespaces:
-            - default
-  destination:
-    namespace: kube-system
-    server: https://kubernetes.default.svc
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-      - CreateNamespace=false
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   name: argo-workflows
+#   namespace: argocd
+#   annotations:
+#     argocd.argoproj.io/sync-wave: "3"
+# spec:
+#   project: default
+#   source:
+#     chart: argo-workflows
+#     repoURL: 'https://argoproj.github.io/argo-helm'
+#     targetRevision: '0.17.1'
+#     helm:
+#       values: |
+#         images:
+#           # -- imagePullPolicy to apply to all containers
+#           pullPolicy: IfNotPresent
+#           # -- Secrets with credentials to pull images from a private registry
+#           pullSecrets: []
+#         controller:
+#           # -- Specify all namespaces where this workflow controller instance will manage
+#           # workflows. This controls where the service account and RBAC resources will
+#           # be created. Only valid when singleNamespace is false.
+#           workflowNamespaces:
+#             - default
+#   destination:
+#     namespace: kube-system
+#     server: https://kubernetes.default.svc
+#   syncPolicy:
+#     automated:
+#       prune: true
+#       selfHeal: true
+#     syncOptions:
+#       - CreateNamespace=false
