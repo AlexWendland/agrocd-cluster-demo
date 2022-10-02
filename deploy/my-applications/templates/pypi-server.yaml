@@ -12,12 +12,12 @@ spec:
     chart: pypiserver
     helm:
       values: |
-        persistence:
-          enabled: true
-          storageClass: freenas-nfs-csi
-          size: 5Gi
-          accessMode: ReadWriteOnce
-          mountPropagation: None
+        # persistence:
+        #   enabled: true
+        #   storageClass: freenas-nfs-csi
+        #   size: 5Gi
+        #   accessMode: ReadWriteOnce
+        #   mountPropagation: None
         auth:
           actions: update, download, list
           credentials:
