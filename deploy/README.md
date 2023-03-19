@@ -1,41 +1,43 @@
 # Deployment
 
-This is my first attempt to use [Terraform](https://www.terraform.io/) to set
-up a [kubernetes](https://kubernetes.io/) cluster on
-[ovh](https://www.ovhcloud.com/en-gb/) with
-[argocd](https://argo-cd.readthedocs.io/en/stable/).
+This is a repository for deploying a [kubernetes](https://kubernetes.io/)
+cluster on [ovh](https://www.ovhcloud.com/en-gb/) using
+[Terraform](https://www.terraform.io/) and [argoCD](https://argo-cd.readthedocs.io/en/stable/).
 
 ## Kubernetes
 
 Kubernetes is a container orchestrator that allows for easy hosting and scaling
-of applications and services. I am using it to simplify a lot of the devops I
-would otherwise have to learn. Using this in conjunction with argoCD allows me
-to a infrastructure-as-code approach to adding services.
+of applications and services. It simplifies a lot of devops tasks by automating
+many aspects of infrastructure management. By using Kubernetes with argoCD, we
+can take an infrastructure-as-code approach to deploying services.
 
 ## Terraform
 
-Terraform is a infrastructure-as-code tool. It is declarative where you state
-what infrastructure you want and it makes the necessary steps to build that for
-you. I will use this to document, build and maintain the servers I use.
+Terraform is an infrastructure-as-code tool that allows you to declare and
+manage your infrastructure in a declarative way. By using Terraform to manage
+the kubernetes cluster, we can document, build and maintain the infrastructure
+in a consistent way.
 
 ## OVH
 
-OVH are a cloud computing provider. I have not put that much research in
-finding the cheapest provider, however they are supported by terraform and
-offer free credits initially for me to test stuff out.
+OVH is a cloud computing provider. While there are many cloud providers out
+there, OVH is supported by Terraform and offers free credits initially for
+testing purposes.
 
 # Set up
 
-For this guide I will assume locally you have installed
+To use this repository, you'll need to have the following installed locally:
 
-- [terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)
+- [Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)
 - [kubectl](https://kubernetes.io/docs/tasks/tools/)
-- All the things I forgot to list here
+- Other required tools (see relevant READMEs in each folder)
 
-More detailed instructions will be in the README in the relevant folders.
+Detailed setup instructions are included in the relevant README files.
 
-1. Use terraform with the terraform directory to set up the infrastructure.
-2. Generate ssh keys to link the kubernetes cluster to your github repo, I
-saved these in the ssh folder.
-3. Use the example in the argocd folder to add the private key to your argoCD
-deployment.
+To set up the infrastructure:
+
+1. Use Terraform with the terraform directory to set up the infrastructure.
+2. Generate ssh keys to link the kubernetes cluster to your GitHub repo, and
+   save these keys in the ssh folder.
+3. Use the example in the argoCD folder to add the private key to your argoCD
+   deployment.
