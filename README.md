@@ -1,6 +1,6 @@
 # argocd-test
 
-Testing out argoCD deployed in Minikube to trial out setting up a website.
+Testing out argoCD deployed in Minikube to trial out setting up a website. Test.
 
 ## Setup
 
